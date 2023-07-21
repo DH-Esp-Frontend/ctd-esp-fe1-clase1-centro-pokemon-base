@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import pokebola from "../../assets/pokebola.png";
-import entrenador from "../../assets/entrenador.png";
+import trainer from "../../assets/trainer.png";
 import pikachu from "../../assets/pikachu.png";
 import Input from "../Input/Input";
-import Detalle from "./Detalle";
+import Detail from "./Detail";
 
 // En este componente tenemos nuestro formulario y dentro de él
 // tenemos los componentes que necesitan consumir nuestro estado.
 // Recuerda cual es el paso que debemos tomar para que nuestros
 // componentes puedan consumir un estado global.
 
-const Formulario = () => {
+const Form = () => {
   return (
     <>
       <header className="form-header">
@@ -31,13 +31,13 @@ const Formulario = () => {
         </p>
         <div className="cuerpo-formulario">
           {/*
-           Si tan solo tuviesemos una manera de "encapsular" nuestros componentes
-           para que puedan acceder al estado global.
+            Si tan solo tuviesemos una manera de "encapsular" nuestros componentes
+            para que puedan acceder al estado global.
           */}
           <div className="inputs">
             <div>
               <p className="nombre-seccion">
-                <img src={entrenador} alt="entrenador" />
+                <img src={trainer} alt="entrenador" />
                 <span>ENTRENADOR</span>
               </p>
               <Input name="nombre" label="Nombre" />
@@ -52,11 +52,11 @@ const Formulario = () => {
               <Input name="nombrePokemon" label="Nombre" />
             </div>
           </div>
-          <Detalle />
+          <Detail />
         </div>
       </div>
     </>
   );
 };
 
-export default Formulario;
+export default Form;
